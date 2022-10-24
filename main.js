@@ -27,6 +27,8 @@ function start(){
     }
 }
 
+let vinte = 0;
+let perse = 0; 
 
 function random(){
 
@@ -44,19 +46,22 @@ function random(){
         document.getElementById('dadoUtente').innerHTML = `Hai fatto ${dadoUtente}`;
         document.getElementById('dadoCp').innerHTML = `il pc ha fatto ${dadoCp}`;
         document.getElementById('risultato').innerHTML = `hai vinto`;
-
+        vinte = vinte + 1;
 
     }else if(dadoUtente < dadoCp){
         // console.log('perso')
         document.getElementById('dadoUtente').innerHTML = `Hai fatto ${dadoUtente}`;
         document.getElementById('dadoCp').innerHTML = `il pc ha fatto ${dadoCp}`;
         document.getElementById('risultato').innerHTML = `hai perso`;
-
+        perse = perse +1;
     }else{
         // console.log('pareggio')
         document.getElementById('dadoUtente').innerHTML = `Hai fatto ${dadoUtente}`;
         document.getElementById('dadoCp').innerHTML = `il pc ha fatto ${dadoCp}`;
-        document.getElementById('risultato').innerHTML = `pareggio`;
-
+        document.getElementById('risultato').innerHTML = `pareggio`; 
     }
+
+    document.getElementById('vinte').innerHTML = `Hai vinto ${vinte} volte`;
+    document.getElementById('perse').innerHTML = `il PC ha vinto ${perse} volte`;
+
 }
