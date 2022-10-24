@@ -26,3 +26,37 @@ function start(){
         avviso.innerHTML = `<p>utente non presente!</p>`;
     }
 }
+
+
+function random(){
+
+    dadoUtente = ('dadoUtente');
+    dadoUtente = Math.round(Math.random() * 5) + 1 ;
+    document.getElementById('dadoUtente').innerHTML = ` hai fatto ${dadoUtente}`;
+
+    dadoCp = ('dadoCp');
+    dadoCp = Math.round(Math.random() * 5) + 1 ;
+    document.getElementById('dadoCp').innerHTML = ` hai fatto ${dadoCp}`;
+
+
+    if( dadoUtente > dadoCp){
+        // console.log('vinto')
+        document.getElementById('dadoUtente').innerHTML = `Hai fatto ${dadoUtente}`;
+        document.getElementById('dadoCp').innerHTML = `il pc ha fatto ${dadoCp}`;
+        document.getElementById('risultato').innerHTML = `hai vinto`;
+
+
+    }else if(dadoUtente < dadoCp){
+        // console.log('perso')
+        document.getElementById('dadoUtente').innerHTML = `Hai fatto ${dadoUtente}`;
+        document.getElementById('dadoCp').innerHTML = `il pc ha fatto ${dadoCp}`;
+        document.getElementById('risultato').innerHTML = `hai perso`;
+
+    }else{
+        // console.log('pareggio')
+        document.getElementById('dadoUtente').innerHTML = `Hai fatto ${dadoUtente}`;
+        document.getElementById('dadoCp').innerHTML = `il pc ha fatto ${dadoCp}`;
+        document.getElementById('risultato').innerHTML = `pareggio`;
+
+    }
+}
